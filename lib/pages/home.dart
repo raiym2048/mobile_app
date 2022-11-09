@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -11,9 +13,14 @@ class _HomeState extends State<Home>{
   List list = [];
   late String userDo;
 
+
+
   @override
   void initState() {
+    super.initState();
+
     list.addAll(["Lets have a брейк", "milk", "kola", "boso"]);
+
   }
 
   void _menuOpen(){
@@ -91,14 +98,17 @@ class _HomeState extends State<Home>{
               content: TextField(
                 onChanged: (String value){
                     userDo = value;
+                    //list.add(userDo);
                 },
               ),
+
               actions: [
                 ElevatedButton(onPressed: (){
-                  setState(() {
+                  setState((){
                     list.add(userDo);
-
                   });
+                  //list.add(userDo);
+                 // FirebaseFirestore.instance.collection('items').add({'item': list});
                   Navigator.of(context).pop();
                 }, child: Text("Add"))
               ],

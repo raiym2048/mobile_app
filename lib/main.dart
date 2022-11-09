@@ -1,12 +1,15 @@
 import 'dart:js';
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_app/pages/home.dart';
 import 'package:mobile_app/pages/main_screen.dart';
 
 
 
-void main() => runApp(MaterialApp(
+void main() {
+
+  runApp(MaterialApp(
   theme: ThemeData(
     primaryColor: Colors.greenAccent,
 
@@ -17,4 +20,33 @@ void main() => runApp(MaterialApp(
     '/home': (context) => Home(),
   },
 
-));
+));}
+
+/*import 'dart:js';
+
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+import 'package:mobile_app/pages/home.dart';
+import 'package:mobile_app/pages/main_screen.dart';
+
+
+void initFirebase() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+}
+void main() async {
+  initFirebase();
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
+  runApp(MaterialApp(
+    theme: ThemeData(
+      primaryColor: Colors.deepOrangeAccent,
+    ),
+    initialRoute: '/',
+    routes: {
+      '/': (context) => MainScreen(),
+      '/todo': (context) => Home(),
+    },
+  ));
+}*/
