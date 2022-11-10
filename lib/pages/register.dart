@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+List password = [];
+List password_repeat = [];
+List email = [];
+late String pas, pas_rep, ema;
 
 class Register extends StatelessWidget {
+
 
   const Register({Key? key}) : super(key: key);
 
@@ -10,7 +14,7 @@ class Register extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> list;
+
 
     return Scaffold(
       backgroundColor: Colors.grey[300],
@@ -43,11 +47,8 @@ class Register extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 20.0),
                     child: TextField(
                       onChanged: (String value){
-
-                        //  list.add(value);
-                        //list.add(userDo);
+                        ema = value;
                       },
-                      obscureText: true,
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Email',
@@ -68,6 +69,9 @@ class Register extends StatelessWidget {
                   child:Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: TextField(
+                      onChanged: (String str){
+                        pas = str;
+                      },
                       obscureText: true,
                       decoration: InputDecoration(
                         border: InputBorder.none,
@@ -91,6 +95,9 @@ class Register extends StatelessWidget {
                   child:Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: TextField(
+                      onChanged: (String str){
+                        pas_rep = str;
+                      },
                       obscureText: true,
                       decoration: InputDecoration(
                         border: InputBorder.none,
@@ -107,7 +114,17 @@ class Register extends StatelessWidget {
                 child: Center(
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, '/home');
+                        if(pas == pas_rep){
+                          password.add(pas);
+                          email.add(ema);
+                          print(ema +" "+ pas);
+                          AlertDialog(title: Text("you have registered!"));
+                          Navigator.pushNamed(context, '/');
+                        }
+                        else{
+                          AlertDialog(title: Text("Wrong password repeat!"));
+                        }
+
                       },
                       child: Container(
                         padding: EdgeInsets.all(10),

@@ -1,12 +1,18 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_app/pages/register.dart';
 
-
+bool logB = false;
+bool pasB = false;
 class Log extends StatelessWidget {
   const Log({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    print(password);
+    late String log_email, log_pass;
     return Scaffold(
       backgroundColor: Colors.grey[300],
         body:SafeArea(
@@ -37,6 +43,9 @@ class Log extends StatelessWidget {
                       child:Padding(
                         padding: const EdgeInsets.only(left: 20.0),
                         child: TextField(
+                          onChanged: (String value){
+                            log_email = value;
+                          },
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: 'Email',
@@ -58,6 +67,9 @@ class Log extends StatelessWidget {
                     child:Padding(
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
+                        onChanged: (String value){
+                          log_pass = value;
+                        },
                         obscureText: true,
                         decoration: InputDecoration(
                           border: InputBorder.none,
@@ -73,8 +85,21 @@ class Log extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Center(
                     child: ElevatedButton(
-                      onPressed: () { 
-                        Navigator.pushNamed(context, '/home');
+                      onPressed: () {
+                        for(var i = 0;i < password.length;i++){
+                          if(password[i] == log_pass && email[i] == log_email){
+                            pasB = true;
+
+                          }
+                        }
+                        if(pasB){
+
+                          Navigator.pushNamed(context, '/home');
+                        }
+                        else{
+                          print("Incorrect password or email");
+                        }
+
                       },
 
                       child: Container(
