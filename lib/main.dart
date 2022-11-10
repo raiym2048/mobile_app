@@ -18,6 +18,7 @@ void main() {
   initialRoute: '/',
   routes: {
     '/': (context) => Log(),
+    '/home': (context) => Home(),
   },
 
 ));}
