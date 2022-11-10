@@ -6,13 +6,14 @@ import 'package:mobile_app/pages/register.dart';
 
 bool logB = false;
 bool pasB = false;
+late String log_email, log_pass;
 class Log extends StatelessWidget {
   const Log({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     print(password);
-    late String log_email, log_pass;
+
     return Scaffold(
       backgroundColor: Colors.grey[300],
         body:SafeArea(
@@ -94,7 +95,7 @@ class Log extends StatelessWidget {
                         }
                         if(pasB){
 
-                          Navigator.pushNamed(context, '/home');
+                          Navigator.pushNamed(context, '/menu');
                         }
                         else{
                           print("Incorrect password or email");

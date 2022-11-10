@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:mobile_app/pages/Log.dart';
 import 'package:mobile_app/pages/home.dart';
 import 'package:mobile_app/pages/main_screen.dart';
+import 'package:mobile_app/pages/menu.dart';
 import 'package:mobile_app/pages/register.dart';
 
 
@@ -19,10 +20,10 @@ void main() {
   ),
   initialRoute: '/',
   routes: {
-    '/': (context) => Log(),
-    '/home': (context) => Home(),
+      '/': (context) => Log(),
     '/register' : (context) => Register(),
-    '/main_screen' : (context)=> MainScreen(),
+    '/menu': (context) => Menu(),
+    '/add': (context) => Home(),
   },
 
 ));}

@@ -4,6 +4,7 @@ List password = [];
 List password_repeat = [];
 List email = [];
 late String pas, pas_rep, ema;
+late String userName;
 
 class Register extends StatelessWidget {
 
@@ -32,6 +33,30 @@ class Register extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   fontSize: 40,
 
+                ),
+              ),
+
+              SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.grey[200],
+                    border: Border.all(color: Colors.white),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child:Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: TextField(
+                      onChanged: (String value){
+                        userName = value;
+                      },
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: 'User Name',
+                      ),
+                    ),
+                  ),
                 ),
               ),
               SizedBox(height: 20),
@@ -114,16 +139,16 @@ class Register extends StatelessWidget {
                 child: Center(
                     child: ElevatedButton(
                       onPressed: () {
-                        if(pas == pas_rep){
-                          password.add(pas);
-                          email.add(ema);
-                          print(ema +" "+ pas);
-                          AlertDialog(title: Text("you have registered!"));
-                          Navigator.pushNamed(context, '/');
-                        }
-                        else{
-                          AlertDialog(title: Text("Wrong password repeat!"));
-                        }
+
+                          if(ema.contains('@gmail') && pas.length > 5) {
+                            if (pas == pas_rep) {
+                              password.add(pas);
+                              email.add(ema);
+                              print(ema + " " + pas);
+                              AlertDialog(title: Text("you have registered!"));
+                              Navigator.pushNamed(context, '/');
+                            }
+                          }
 
                       },
                       child: Container(
