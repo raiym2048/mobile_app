@@ -2,6 +2,7 @@ import 'dart:js';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile_app/pages/Log.dart';
 import 'package:mobile_app/pages/home.dart';
 import 'package:mobile_app/pages/main_screen.dart';
 
@@ -16,8 +17,7 @@ void main() {
   ),
   initialRoute: '/',
   routes: {
-    '/': (context) => MainScreen(),
-    '/home': (context) => Home(),
+    '/': (context) => Log(),
   },
 
 ));}

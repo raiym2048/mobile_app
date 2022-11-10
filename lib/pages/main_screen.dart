@@ -9,7 +9,23 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
         backgroundColor: Colors.grey[900],
-        title: Text("Список Элемепнтов"),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            ElevatedButton(onPressed: (){
+              Navigator.pushNamedAndRemoveUntil(context, '/home', (route)=> true);
+            }, child: Text("1")),
+            ElevatedButton(onPressed: (){
+              Navigator.pushNamedAndRemoveUntil(context, '/home', (route)=> true);
+            }, child: Text("2")),
+            ElevatedButton(onPressed: (){
+              Navigator.pushNamedAndRemoveUntil(context, '/home', (route)=> true);
+            }, child: Text("3")),
+            ElevatedButton(onPressed: (){
+              Navigator.pushNamedAndRemoveUntil(context, '/home', (route)=> true);
+            }, child: Text("4")),
+          ],
+        ),
         centerTitle: true,
         ),
     body:Column(
