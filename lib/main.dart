@@ -5,12 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:mobile_app/pages/Log.dart';
 import 'package:mobile_app/pages/home.dart';
 import 'package:mobile_app/pages/main_screen.dart';
+import 'package:mobile_app/pages/register.dart';
 
 
 
 void main() {
 
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
   theme: ThemeData(
     primaryColor: Colors.greenAccent,
 
@@ -19,6 +21,8 @@ void main() {
   routes: {
     '/': (context) => Log(),
     '/home': (context) => Home(),
+    '/register' : (context) => Register(),
+    '/main_screen' : (context)=> MainScreen(),
   },
 
 ));}

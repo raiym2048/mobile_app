@@ -76,6 +76,7 @@ class Log extends StatelessWidget {
                       onPressed: () { 
                         Navigator.pushNamed(context, '/home');
                       },
+
                       child: Container(
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(color: Colors.deepOrangeAccent,
@@ -87,31 +88,51 @@ class Log extends StatelessWidget {
                               color: Colors.white),
                         ),
                       ),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.purple,
+                          //padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                          textStyle: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold)),
                     )
 
                   ),
                 ),
                 SizedBox(height: 20),
-
-                Row(
-
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-
-                    Text("Not a member?", style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
-                    ),
-                    Text(" Register now!", style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blue,
-                    ),
-
-                    ),
+                Container(
+                  child: Row(
 
 
-                  ],
-                )
+
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+
+                              Text("Not a member?", style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                backgroundColor: Colors.white,
+                                color: Colors.black,
+
+                            ),
+                          ),
+                          SizedBox(width: 20),
+
+                          Container(
+
+                            child: ElevatedButton(onPressed: () {
+                              Navigator.pushNamed(context, '/register');
+                            },
+                                child:
+                                Text("Register now!", style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.blue,
+                                  backgroundColor: Colors.white,
+                                ),
+                                )),
+                          ),
+                        ],
+                      )
+                  ),
+
               ],
             ),
           ),
