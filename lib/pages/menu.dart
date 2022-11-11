@@ -42,6 +42,9 @@ class Menu extends StatelessWidget {
               title: Text("Add Course"),
             ),
             ListTile(
+              onTap: (){
+                Navigator.pushNamed(context, '/inform');
+              },
               leading: Icon(Icons.medical_information),
               title: Text("Information"),
             ),
@@ -73,6 +76,11 @@ class Menu extends StatelessWidget {
         ),
       ),
     );}
+  void Upp(){
+    for(int i = 0;i < list.length;i++){
+      MyMenu(title: list[i],icon: Icons.school, warn: Colors.brown,);
+    }
+  }
 }
 
 class MyMenu extends StatelessWidget {
