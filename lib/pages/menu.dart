@@ -19,7 +19,7 @@ class Menu extends StatelessWidget {
       drawer: Drawer(
         child: ListView(
           children: <Widget>[
-            UserAccountsDrawerHeader(accountName: Text(userName), accountEmail: Text(log_email),
+            UserAccountsDrawerHeader(accountName: Text("userName"), accountEmail: Text("log_email"),
             currentAccountPicture: CircleAvatar(
               backgroundImage: NetworkImage("https://play-lh.googleusercontent.com/e6-dZlTM-gJ2sFxFFs3X15O84HEv6jc9PQGgHtVTn7FP6lUXeEAkDl9v4RfVOwbSuQ"),
 

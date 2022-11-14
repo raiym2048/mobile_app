@@ -19,7 +19,7 @@ void main() {
     primaryColor: Colors.greenAccent,
 
   ),
-  initialRoute: '/',
+  initialRoute: '/menu',
   routes: {
       '/': (context) => Log(),
     '/register' : (context) => Register(),
