@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "1081135547141",
-    "project_id": "project-bb4c1",
-    "storage_bucket": "project-bb4c1.appspot.com"
+    "project_number": "561458878938",
+    "project_id": "apping-cd250",
+    "storage_bucket": "apping-cd250.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1081135547141:android:f203793e29e402f78fad6c",
+        "mobilesdk_app_id": "1:561458878938:android:d5346b0f69c8cde9e2c8e3",
         "android_client_info": {
           "package_name": "com.raiym.mobile_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1081135547141-jqbo5vkamig31r07etnqgjqd7n41ekn2.apps.googleusercontent.com",
+          "client_id": "561458878938-meu5718saeifsjfdk8c5q3fgrjhahu0n.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAIJR4vqbxqpQklB424AtbhwucrTsclCLA"
+          "current_key": "AIzaSyC4b_ydOxU7B7TBhcKrNhU2fk7ctDWADMY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1081135547141-jqbo5vkamig31r07etnqgjqd7n41ekn2.apps.googleusercontent.com",
+              "client_id": "561458878938-meu5718saeifsjfdk8c5q3fgrjhahu0n.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
