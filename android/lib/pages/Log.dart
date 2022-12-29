@@ -1,6 +1,5 @@
 
 
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_app/pages/register.dart';
@@ -95,7 +94,7 @@ class Log extends StatelessWidget {
                           }
                         }
                         if(pasB){
-                          
+
                           Navigator.pushNamed(context, '/menu');
                         }
                         else{
@@ -165,11 +164,5 @@ class Log extends StatelessWidget {
           ),
         ),
     );
-    Future signIn() async{
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email:log_email.text.trim(),
-        password:log_pass.text.trim(),
-      );
-    }
   }
 }
